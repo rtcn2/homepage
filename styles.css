@@ -1,0 +1,510 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    z-index: 999;
+    padding: 1em;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+:focus {
+    outline: 2px solid #4A90E2;
+    outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+    outline: none;
+}
+
+:focus-visible {
+    outline: 2px solid #4A90E2;
+    outline-offset: 2px;
+}
+
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #e74c3c;
+  --text-color: #333;
+  --background-color: #ecf0f1;
+}
+
+body {
+  margin: 0;
+  padding: 2rem;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background: var(--background-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+header {
+  background: var(--primary-color);
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s;
+  -webkit-transition: background 0.3s;
+  -o-transition: background 0.3s;
+}
+
+nav a:hover {
+  background: var(--secondary-color);
+  border-radius: 4px;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+section {
+  margin: 4rem 0;
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#projects {
+    padding: 3rem 2rem;
+}
+
+.projects-container {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    margin: 1rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    -webkit-transition: -webkit-transform 0.3s ease, opacity 0.3s ease;
+    -o-transition: transform 0.3s ease, opacity 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease, opacity 0.3s ease;
+}
+
+.project:hover {
+    -webkit-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+    aspect-ratio: 16 / 9;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.project img:hover {
+    opacity: 0.8;
+}
+
+.project h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.project p {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+form {
+  display: grid;
+  gap: 1rem;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+button {
+    background: var(--secondary-color);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    -webkit-transition: background 0.3s;
+    -o-transition: background 0.3s;
+    transition: background 0.3s;
+}
+
+button:hover {
+  background: #c0392b;
+}
+
+footer {
+  background: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 4rem;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    text-align: justify;
+    padding: 0 1rem;
+}
+
+.about-content p:first-of-type {
+    font-size: 1.2rem;
+    line-height: 1.9;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.about-content p {
+    margin-bottom: 1.8rem;
+    font-size: 1.1rem;
+}
+
+#about h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    color: var(--primary-color);
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.skills-list li {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    -webkit-transition: -webkit-transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.skills-list li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--primary-color);
+    border-radius: 4px 0 0 4px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.skills-list li:hover {
+    -webkit-transform: translateX(5px);
+    -ms-transform: translateX(5px);
+    transform: translateX(5px);
+}
+
+.skills-list i {
+    width: auto;
+    height: auto;
+    font-size: 2rem;
+    color: var(--primary-color);
+    transition: transform 0.3s ease;
+    -webkit-transition: -webkit-transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.skills-list li:hover i {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.skills-list span {
+    font-size: 1.1rem;
+    font-weight: 500;
+    position: relative;
+}
+
+.skills-list span::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--secondary-color);
+    transition: width 0.3s ease;
+}
+
+.skills-list li:hover span::after {
+    width: 100%;
+}
+
+.hamburger {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 2rem;
+    height: 2rem;
+}
+
+.hamburger span {
+    display: block;
+    width: 2rem;
+    height: 0.25rem;
+    background: white;
+    border-radius: 10px;
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    -webkit-transform-origin: 1px;
+    -ms-transform-origin: 1px;
+    transform-origin: 1px;
+    position: relative;
+}
+
+/* Hamburger Animation States */
+.hamburger[aria-expanded="true"] span:first-child {
+    -webkit-transform: rotate(45deg) translate(0px, -2px);
+    -ms-transform: rotate(45deg) translate(0px, -2px);
+    transform: rotate(45deg) translate(0px, -2px);
+}
+
+.hamburger[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+    -ms-transform: translateX(-20px);
+    transform: translateX(-20px);
+}
+
+.hamburger[aria-expanded="true"] span:nth-child(3) {
+    -webkit-transform: rotate(-45deg) translate(0px, 2px);
+    -ms-transform: rotate(-45deg) translate(0px, 2px);
+    transform: rotate(-45deg) translate(0px, 2px);
+}
+
+.return-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+    padding: 0.75rem 1.5rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    border: 1px solid currentColor;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    opacity: 0.8;
+}
+
+.return-link:hover {
+    opacity: 1;
+    background: var(--primary-color);
+    color: white;
+}
+
+.return-link i {
+    font-size: 1.2rem;
+}
+
+.project-filters {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.filter-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    background: transparent;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+.project.hidden {
+    display: none;
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    padding: 2rem;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.lightbox.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+}
+
+.lightbox-image {
+    max-width: 90%;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.lightbox-close:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive media styles */
+img,
+video,
+iframe {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Override specific image styles to maintain consistency */
+/* Ensure skill icons maintain their size */
+
+.form-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.error-message {
+    display: none;
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+input:invalid:not(:focus),
+textarea:invalid:not(:focus) {
+    border-color: #dc3545;
+}
+
+input:valid,
+textarea:valid {
+    border-color: #28a745;
+}
+
+.form-group.error .error-message {
+    display: block;
+}
+
+.form-group.error input,
+.form-group.error textarea {
+    border-color: #dc3545;
+}
+
+.form-group.success input,
+.form-group.success textarea {
+    border-color: #28a745;
+}

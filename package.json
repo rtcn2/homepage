@@ -1,0 +1,16 @@
+{
+  "name": "homepage-2",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^24.8.1",
+    "http-server": "^14.1.1",
+    "serve": "^14.2.5"
+  }
+}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional portfolio showcasing web development projects, skills in HTML, CSS, JavaScript, and responsive design. Contact me for collaboration opportunities.">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body id="top">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+        <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav aria-label="Main Navigation" class="nav-menu">
+            <ul role="menubar">
+                <li role="none"><a href="#about" role="menuitem" tabindex="0">About Me</a></li>
+                <li role="none"><a href="#skills" role="menuitem" tabindex="0">Skills</a></li>
+                <li role="none"><a href="#projects" role="menuitem" tabindex="0">Projects</a></li>
+                <li role="none"><a href="#contact" role="menuitem" tabindex="0">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+        <section id="about" aria-labelledby="about-heading">
+            <h2 id="about-heading">About Me</h2>
+            <div class="about-content">
+                <p>Hi, I'm [Your Name], a passionate web developer with a focus on creating accessible and user-friendly web experiences. With 3+ years of experience in front-end development, I specialize in building responsive websites and applications that deliver real value to users.</p>
+                
+                <p>My approach combines clean code principles with modern design practices. I'm particularly interested in web accessibility and ensuring that digital experiences are available to everyone.</p>
+                
+                <p>When I'm not coding, you can find me contributing to open-source projects, writing technical articles, or exploring the latest web technologies. I'm always eager to take on new challenges and collaborate on innovative projects.</p>
+            </div>
+            <a href="#top" class="return-link" aria-label="Return to top of page">
+                <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+                Return to top
+            </a>
+        </section>
+
+        <section id="skills" aria-labelledby="skills-heading">
+            <h2 id="skills-heading">Skills</h2>
+            <ul class="skills-list">
+                <li>
+                    <i class="fa-solid fa-code fa-2x" aria-hidden="true"></i>
+                    <span>HTML &amp; CSS</span>
+                </li>
+                <li>
+                    <i class="fa-brands fa-js fa-2x" aria-hidden="true"></i>
+                    <span>JavaScript</span>
+                </li>
+                <li>
+                    <i class="fa-solid fa-mobile-screen-button fa-2x" aria-hidden="true"></i>
+                    <span>Responsive Design</span>
+                </li>
+            </ul>
+            <a href="#" class="return-link" aria-label="Return to top of page">
+                <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+                Return to top
+            </a>
+        </section>
+        
+        <section id="projects" aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Projects</h2>
+            
+            <div class="project-filters" role="toolbar" aria-label="Project filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web Development</button>
+                <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+            </div>
+
+            <div class="projects-container">
+                <article class="project" data-category="web" aria-labelledby="project1-title" tabindex="0">
+                    <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=300"
+                         alt="Website design on computer screen" 
+                         width="300" 
+                         height="200">
+                    <h3 id="project1-title">E-commerce Website Redesign</h3>
+                    <p>Led the complete redesign of an e-commerce platform focusing on improved user experience and accessibility. Implemented responsive design patterns and modern CSS Grid layouts, resulting in a 25% increase in mobile conversions.</p>
+                </article>
+
+                <article class="project" data-category="mobile" aria-labelledby="project2-title" tabindex="0">
+                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=300" 
+                         alt="Mobile app interface design" 
+                         width="300" 
+                         height="200">
+                    <h3 id="project2-title">Task Management Mobile App</h3>
+                    <p>Developed a React Native mobile application for task management with offline capabilities and push notifications. Features include drag-and-drop organization, priority scheduling, and dark mode support.</p>
+                </article>
+
+                <article class="project" data-category="design" aria-labelledby="project3-title" tabindex="0">
+                    <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=300" 
+                         alt="UI design system components" 
+                         width="300" 
+                         height="200">
+                    <h3 id="project3-title">Design System Creation</h3>
+                    <p>Developed a comprehensive design system including component library, color palette, typography guidelines, and interaction patterns. Improved design consistency across multiple products.</p>
+                </article>
+            </div>
+            <a href="#" class="return-link" aria-label="Return to top of page">
+                <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+                Return to top
+            </a>
+        </section>
+
+        <section id="contact" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Contact Me</h2>
+            <form id="contact-form" novalidate>
+                <fieldset>
+                    <legend>Send a message</legend>
+
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input 
+                            type="text" 
+                            id="name" 
+                            name="name" 
+                            required 
+                            minlength="2"
+                            pattern="[A-Za-z\s]+" 
+                            aria-describedby="name-error">
+                        <span class="error-message" id="name-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            required
+                            pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
+                            aria-describedby="email-error">
+                        <span class="error-message" id="email-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea 
+                            id="message" 
+                            name="message" 
+                            required 
+                            minlength="10"
+                            aria-describedby="message-error"></textarea>
+                        <span class="error-message" id="message-error"></span>
+                    </div>
+
+                    <button type="submit">Send</button>
+                </fieldset>
+            </form>
+            <a href="#" class="return-link" aria-label="Return to top of page">
+                <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+                Return to top
+            </a>
+        </section>
+    </main>
+
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+        <button class="lightbox-close" aria-label="Close image preview">×</button>
+        <img src="" alt="" class="lightbox-image">
+    </div>
+
+    <footer>
+        <p>&copy; 2025 My Portfolio</p>
+    </footer>
+</body>
+</html>
